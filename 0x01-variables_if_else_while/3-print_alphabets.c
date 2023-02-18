@@ -17,10 +17,7 @@ int main(void)
 	}
 	for (upper_case = 'A'; upper_case <= 'Z'; upper_case++)
 	{
-		putchar(upper_case);
+		putchar(str(upper_case)+"\n");
 	}
-{
-	putchar(\n);
-}
 	return (0);
 }
