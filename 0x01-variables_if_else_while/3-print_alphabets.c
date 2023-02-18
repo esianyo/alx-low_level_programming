@@ -8,8 +8,8 @@
 
 int main(void)
 {
-	int lower_case;
-	int upper_case;
+	char lower_case;
+	char upper_case;
 
 	for (lower_case = 'a'; lower_case <= 'z'; lower_case++)
 	{
@@ -17,7 +17,7 @@ int main(void)
 	}
 	for (upper_case = 'A'; upper_case <= 'Z'; upper_case++)
 	{
-		putchar((upper_case);
+		putchar(upper_case);
 	}
 {
 	putchar("\n");
