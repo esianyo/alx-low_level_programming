@@ -13,7 +13,6 @@ int main(void)
 	for (lower_case = 'a'; lower_case <= 'z'; lower_case++)
 	{
 		putchar(lower_case);
-		getchar(lower_case);
 	}
 	return (0);
 }
