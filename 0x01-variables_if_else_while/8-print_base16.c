@@ -3,7 +3,7 @@
  * main - To print numbers in base 16 in lowercase
  * Return: Always 0
  */
-int main(0)
+int main(void)
 {
 	int number;
 	char letters;
