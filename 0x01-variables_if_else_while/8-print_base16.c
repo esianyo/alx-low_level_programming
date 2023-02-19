@@ -8,8 +8,8 @@ int main(void)
 	int number;
 	char letters;
 
-	for (num = 0; num < 10; num++)
-		putchar('0' + num);
+	for (number = 0; number < 10; number++)
+		putchar('0' + number);
 	for (letters = 'a'; letters <= 'f'; letters++)
 		putchar(letters);
 	putchar('\n');
