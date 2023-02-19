@@ -13,7 +13,7 @@ int main(void)
 		putchar('0' + comb);
 		if (comb == 9)
 			continue;
-		putchar(",");
+		putchar(',');
 		putchar(' ');
 	}
 
