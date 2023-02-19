@@ -10,7 +10,7 @@ int main(void)
 	int single;
 
 	for (single = 0; single < 10; single++)
-		printf(single);
+		printf("%d", single);
 	printf('\n');
 	return (0);
 }
