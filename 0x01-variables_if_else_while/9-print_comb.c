@@ -10,8 +10,8 @@ int main(void)
 
 	for (comb = 0; comb <= 9; comb++)
 		putchar('0' + comb);
-		putchar(",");
-		putchar(" ");
+	putchar(",");
+	putchar(" ");
 	putchar('\n');
 	return (0);
 }
