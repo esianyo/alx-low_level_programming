@@ -10,7 +10,7 @@ int main(void)
 	char qNe;
 
 	for (qNe = 'a'; qNe <= 'z'; qNe++)
-		putchar("[^eq]", qNe);
+		putchar("[^(eq)", qNe);
 	putchar('\n');
 	return (0);
 }
