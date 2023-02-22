@@ -4,7 +4,8 @@
 /**
  * File: main.h
  *
- * Description: Declarations for all functions I will use in the directory 0x02-functions_nested_loops.
+ * Description: Declarations for all functions I will use in the 
+ * 		directory 0x02-functions_nested_loops.
  */
 
 int _putchar(char c);
