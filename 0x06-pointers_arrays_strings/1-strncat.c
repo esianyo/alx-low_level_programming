@@ -5,6 +5,8 @@
  * @src: string variable to copy
  * @dest: to be overwritten
  * @n: variable to be concatenated
+ *
+ * Return: Returns dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
@@ -20,6 +22,7 @@ char *_strncat(char *dest, char *src, int n)
 		dest[a] = src[b];
 		a++;
 	}
+
 	if (dest[a - 1] != '\0')
 		dest[a] = '\0';
 
