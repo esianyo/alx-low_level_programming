@@ -6,7 +6,7 @@
  * @dest: to be overwritten
  * @n: variable to be concatenated
  *
- * Return: Returns dest
+ * Return: returns dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
