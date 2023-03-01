@@ -5,6 +5,7 @@
  * @src: string variable to copy
  * @dest: to be overwritten
  * @n: variable to be concatenated
+ * Description: concatenates n number of values from src to end of dest
  *
  * Return: brings back dest
  */
