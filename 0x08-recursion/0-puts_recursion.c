@@ -7,7 +7,5 @@
 
 void _puts_recursion(char *s)
 {
-	s[50];
-
 	_putchar("%s", s);
 }
