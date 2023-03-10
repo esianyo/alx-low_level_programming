@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * is_palindrome - checks for a palindrome string
+ * assistant - checks for a palindrome string
  * @begin: beginning of index
  * @stop: ending of index
  *
@@ -21,7 +21,7 @@ int assistant(char *s, int begin, int stop)
 	}
 	else
 	{
-		return assistant(s, begin + 1, stop - 1);
+		return (assistant(s, begin + 1, stop - 1));
 	}
 }
 
@@ -36,12 +36,13 @@ int assistant(char *s, int begin, int stop)
 int is_palindrome(char *s)
 {
 	int len = strlen(s);
-	
+
 	if (len == 0)
 	{
-		return 1;
+		return (1);
 	}
 	else
 	{
-		return assistant(s, 0, len - 1);}
+		return (assistant(s, 0, len - 1));
+	}
 }
