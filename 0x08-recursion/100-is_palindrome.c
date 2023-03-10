@@ -5,6 +5,7 @@
  * assistant - checks for a palindrome string
  * @begin: beginning of index
  * @stop: ending of index
+ * @s: string variable
  *
  * Return: returns 1 if palindrome
  */
