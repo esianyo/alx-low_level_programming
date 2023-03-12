@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - a program that prints the minimum number of coins
@@ -13,29 +14,29 @@
 
 int main(int argc, char *argv[])
 {
-	if (argc != 2)
-	{
-		printf("Error\n");
-		return (1);
-	}
-
-	int cents = atoi(argv[1]);
-
-	if (cents < 0)
+	if (argc == 1)
 	{
 		printf("0\n");
 		return (0);
 	}
 
-	int coins = 0;
-	int denominations[] = {25, 10, 5, 2, 1};
-	int num_denominations = sizeof(denominations) / sizeof(int);
+	int sum = 0;
 
-	for (int i = 0; i < num_denominations; i++)
+	for (int i = 1; i < argc; i++)
 	{
-		coins += cents / denominations[i];
-		cents %= denominations[i];
+		int j = 0;
+
+		while (argv[i][j])
+		{
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			j++;
+		}
+		sum += atoi(argv[i]);
 	}
-	printf("%d\n", coins);
+	printf("%d\n", sum);
 	return (0);
 }
