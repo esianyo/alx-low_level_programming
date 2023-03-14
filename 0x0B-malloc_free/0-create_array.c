@@ -20,12 +20,7 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 
-	myPointer = malloc(size * sizeof(char));
-
-	if (myPointer = NULL)
-	{
-		return (NULL);
-	}
+	myPointer = malloc(size * sizeof(cha));
 
 	for (i = 0; i < size; i++)
 	{
