@@ -10,7 +10,7 @@
  * Return: outcome
  */
 
-char* str_concat(char *s1, char *s2)
+char *str_concat(char *s1, char *s2)
 {
 	char *result;
 
@@ -24,7 +24,7 @@ char* str_concat(char *s1, char *s2)
 	}
 
 	result = strdup(s1);
-	
+
 	if (result == NULL)
 	{
 		return (NULL);
