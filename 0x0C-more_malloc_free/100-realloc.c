@@ -12,9 +12,9 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	unsigned int i;
 	char *cur;
 	char *prev;
+	unsigned int i;
 
 	prev = ptr;
 
@@ -38,7 +38,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 
 	if (new_size < old_size)
 	{
-		for (i = 0;  < new_size; i++)
+		for (i = 0; i < new_size; i++)
 			cur[i] = prev[i];
 		return (cur);
 	}
