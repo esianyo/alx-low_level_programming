@@ -9,7 +9,7 @@
  * @age: floating variable
  * @owner: string variable
  *
- * Description: no long talk
+ * Return: empty
  */
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
