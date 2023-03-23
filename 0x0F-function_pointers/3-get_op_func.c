@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "3-main.c"
 
 /**
  * get_op_func - finds right operator
