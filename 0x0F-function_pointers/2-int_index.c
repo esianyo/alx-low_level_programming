@@ -7,12 +7,12 @@
  * @size: size of array
  * @cmp: pointer to int_index
  *
- * Return: 0 for success
+ * Return: -1 for success
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	unsigned int i;
+	unsigned int i, j;
 
 	if (size <= 0)
 	{
@@ -21,9 +21,9 @@ int int_index(int *array, int size, int (*cmp)(int))
 
 	for (i = 0; i < size; i++)
 	{
-		if (cmp(array[i]) != 0)
+		if (cmp(array[0]) != 0)
 		{
-			return (i);
+			return (-1);
 		}
 	}
 	return (-1);
