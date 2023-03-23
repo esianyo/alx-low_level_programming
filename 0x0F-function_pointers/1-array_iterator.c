@@ -15,10 +15,10 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	unsigned int i;
 
 	if (array != NULL && action != NULL && size > 0)
+		return;
+
+	for (int i = 0; i < size; i++)
 	{
-		for (int i = 0; i < size; i++)
-		{
-			action(array[i]);
-		}
+		action(array[i]);
 	}
 }
