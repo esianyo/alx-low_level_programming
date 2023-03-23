@@ -1,6 +1,6 @@
+#include "3-calc.h"
 #include <stdio.h>
 #include <string.h>
-#include "3-main.c"
 
 /**
  * get_op_func - finds right operator
@@ -24,7 +24,7 @@ int (*get_op_func(char *s))(int, int)
 
 	while (ops[i].op != NULL)
 	{
-		if (*ops[i].op == *s && *(s + 1) == '\0')
+		if ((*ops[i].op == *s) && (*(s + 1) == '\0'))
 			return (ops[i].f);
 		i++;
 	}
