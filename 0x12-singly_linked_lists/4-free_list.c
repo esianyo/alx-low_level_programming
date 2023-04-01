@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -10,13 +9,18 @@
 
 void free_list(list_t *head)
 {
-	list_t recent;
+	list_t *hold;
 
-	while (head != NULL)
+	if (head == NULL)
+		return;
+
+	while (head->next != NULL)
 	{
-		recent = head;
-		head = head->next;
-		free(recent->str);
-		free(recent);
+		hold = head->next;
+		free(head->str);
+		free(head);
+		head = hold;
 	}
+	free(head->str);
+	free(head);
 }
