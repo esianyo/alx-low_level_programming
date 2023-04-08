@@ -7,12 +7,11 @@
  * @b: variable for binary digits
  *
  * Return: unsigned integer or 0
- */ 
+ */
 
 unsigned int binary_to_uint(const char *b)
 {
-	int count;
-	unsigned int outcome = 0;
+	int count, outcome = 0;
 
 	if (b == NULL)
 	{
