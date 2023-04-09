@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * set_bit - returns value of bit at a given index
+ * set_bit - sets value of bit at a given index to 1
  * @n: binary variable
  * @index: binary position
  *
