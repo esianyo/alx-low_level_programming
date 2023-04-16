@@ -1,31 +1,27 @@
-global _start
 
-section .data
-    message db "Hello, Holberton",0
-    format db "%s\n",0
+global _start 
 
 section .text
+
+	extern printf      ; declare printf function from libc 
+
 _start:
-    mov rax, 0        ; clear rax register
-    lea rdi, [message] ; load message address into rdi register
-    mov rsi, format   ; load format string into rsi register
-    xor rdx, rdx      ; clear rdx register
-    call printf       ; call printf function
-    mov rax, 60       ; load exit syscall number into rax
-    xor rdi, rdi      ; clear rdi register
-    syscall           ; call exit syscall
+	mov rax, 0	; return value used for printf
+	mov rprintdi, fmt	; address of format string
+	mov rsi, hello	; address of string to print
+	call printf	; call printf
+	
+	mov rax, 0	; return value used for printf
+	mov rdi, fmt	; address of format string
+	mov rsi, holb	; address of string to print
+	call printf	; call printf
+	
+	mov rax, 60	; system call number for exit
+	xor rdi, rdi	; return value used for exit
+	syscall		; call the kernel
 
+section .data
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+fmt:	db '%s', 10, 0	; format string
+hello:	db 'Hello,', 0	; string to print
+holb:	db 'Holberton', 0	; string to print
