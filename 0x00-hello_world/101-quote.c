@@ -1,12 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <unistd.h>
+
 /**
  * main - Main entry
  *
  * Return: Always 1 (Success)
  */
+
 int main(void)
 {
-fwrite(4 " and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
-return (1);
+	char *sentence = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	write(2, sentence, 59);
+
+	return (1);
 }
