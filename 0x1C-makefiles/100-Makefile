@@ -1,0 +1,29 @@
+# -*- Makefile -*-
+
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
+SRC = main.c school.c
+RM = rm -f
+
+.PHONY: all clean oclean fclean re
+
+all: $(SRC)
+	$(CC) $(SRC) $(CFLAGS) -o school
+
+clean:
+	$(RM) school *~ core
+
+oclean:
+	$(RM) $(SRC:.c=.o)
+
+fclean: clean oclean
+
+re: fclean all
+
+.PRECIOUS: %.c
+
+school: school.o
+	$(CC) school.o $(CFLAGS) -o school
+
+school.o: school.c m.h
+	$(CC) -c school.c $(CFLAGS)
