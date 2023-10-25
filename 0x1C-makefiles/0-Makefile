@@ -1,3 +1,2 @@
 # Compiling two files with the all rule
-all:
-    gcc school.c main.c -o school
+all: gcc main.c school.c -o school
