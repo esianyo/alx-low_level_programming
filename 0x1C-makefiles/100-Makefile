@@ -1,42 +1,20 @@
-# Makefile
-
-# Compiler and compiler flags
 CC = gcc
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-# Source files (.c files)
-SRC = main.c file1.c file2.c
+.PHONY: all clean oclean fclean re
 
-# Object files (.o files) - calculated using patsubst
-OBJ = $(patsubst %.c, %.o, $(SRC))
+all: m.h $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
-# Name of the executable
-NAME = school
-
-# Default target
-all: $(NAME)
-
-# Rule to build the executable
-$(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $@
-
-# Rule to compile individual .c files into .o files
-%.o: %.c m.h
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Clean up generated files and the executable
 clean:
-	$(RM) $(NAME) *~ \#*
+	$(RM) *~ $(NAME)
 
-# Clean only the object files
 oclean:
 	$(RM) $(OBJ)
 
-# Clean everything except the source files
 fclean: clean oclean
 
-# Force recompilation of all source files
 re: fclean all
-
-# Phony targets to avoid conflicts with files of the same names
-.PHONY: all clean oclean fclean re
